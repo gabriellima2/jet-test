@@ -5,16 +5,9 @@ import { Rating } from '@/app/ui/components/rating'
 import { Status } from '@/app/ui/components/status'
 import { Table } from '@/app/ui/components/table'
 
-import { CarStatus } from '@/entities/car.entity'
+import { CarEntity } from '@/entities/car.entity'
 
-type CarTableItemProps = {
-	id: string
-	name: string
-	imageUrl: string
-	nextReservation: Date
-	status: CarStatus
-	rating: number
-}
+export type CarTableItemProps = CarEntity
 
 export function CarTableItem(props: CarTableItemProps) {
 	const nextReservationText = `${props.nextReservation.getDate()}/${props.nextReservation.getMonth()}`
