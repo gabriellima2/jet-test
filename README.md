@@ -22,3 +22,28 @@ A idéia nesta avaliação é avaliar a capacidade de resolução de problemas d
 ## Lighthouse
 
 <img src="./public/docs/lighthouse.png" alt="Printscreen of Lighthouse rating" />
+
+## Rodando o projeto
+
+Você precisa ter o [Git](https://git-scm.com/) e algum gerenciador de pacotes([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) | [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)) instalados em sua máquina.
+
+### Preparando o ambiente
+
+```bash
+1. Clone o repositório:
+$ git clone https://github.com/gabriellima2/jet-test.git
+
+2. Acesse a pasta e instale as dependências via terminal:
+$ yarn / npm i
+```
+
+### Rodando a aplicação
+
+```bash
+1. Inicie a aplicação em modo de desenvolvimento:
+$ yarn dev / npm run dev
+
+2. O servidor será aberto em http://localhost:3000
+```
+
+<p align="center">Made with 💙 by <a href="https://www.linkedin.com/in/gabriel-lima-860612236">Gabriel Lima</a></p>
