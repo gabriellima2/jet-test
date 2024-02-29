@@ -17,7 +17,24 @@ const DEFAULT_ICONS = {
 function Text(props: StatusDefaultProps) {
 	const { status, className } = props
 	const statusText = !CAR_STATUS[status] ? 'Invalid Status' : status
-	return <p className={cn(className)}>{statusText}</p>
+	const variants = {
+		isAvailable: status === CAR_STATUS.available,
+		isUnavailable: status === CAR_STATUS.unavailable,
+	}
+	return (
+		<p
+			className={cn(
+				'rounded-md bg-gray-200 px-[10px] py-[2px] text-xs font-medium capitalize text-gray-800',
+				{
+					'bg-green-100 text-green-800': variants.isAvailable,
+					'bg-red-100 text-red-800': variants.isUnavailable,
+				},
+				className
+			)}
+		>
+			{statusText}
+		</p>
+	)
 }
 
 function Icon(props: StatusDefaultProps) {
