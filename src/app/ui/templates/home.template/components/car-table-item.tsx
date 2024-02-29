@@ -5,12 +5,12 @@ import { Rating } from '@/app/ui/components/rating'
 import { Status } from '@/app/ui/components/status'
 import { Table } from '@/app/ui/components/table'
 
+import { getDateText } from '@/helpers/get-date-text'
 import { CarEntity } from '@/entities/car.entity'
 
 export type CarTableItemProps = CarEntity
 
 export function CarTableItem(props: CarTableItemProps) {
-	const nextReservationText = `${props.nextReservation.getDate()}/${props.nextReservation.getMonth()}`
 	return (
 		<Table.Row>
 			<Table.DataCell className="max-w-[298px]">
@@ -28,7 +28,7 @@ export function CarTableItem(props: CarTableItemProps) {
 					<p className="text-gray-900">{props.name}</p>
 				</div>
 			</Table.DataCell>
-			<Table.DataCell>{nextReservationText}</Table.DataCell>
+			<Table.DataCell>{getDateText(props.nextReservation)}</Table.DataCell>
 			<Table.DataCell>
 				<Status.Text status={props.status} />
 			</Table.DataCell>

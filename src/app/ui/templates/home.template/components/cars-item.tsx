@@ -2,12 +2,12 @@ import { Rating } from '@/app/ui/components/rating'
 import { Status } from '@/app/ui/components/status'
 import { Card } from '@/app/ui/components/card'
 
+import { getDateText } from '@/helpers/get-date-text'
 import { CarEntity } from '@/entities/car.entity'
 
 export type CarsItemProps = CarEntity
 
 export function CarsItem(props: CarsItemProps) {
-	const nextReservationText = `${props.nextReservation.getDate()}/${props.nextReservation.getMonth()}`
 	return (
 		<li className="w-full">
 			<Card.Root>
@@ -23,7 +23,7 @@ export function CarsItem(props: CarsItemProps) {
 						<div className="flex flex-col gap-2">
 							<Card.Title>{props.name}</Card.Title>
 							<Card.Paragraph>
-								Next Reservation: {nextReservationText}
+								Next Reservation: {getDateText(props.nextReservation)}
 							</Card.Paragraph>
 						</div>
 						<Rating value={props.rating} />
