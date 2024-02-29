@@ -8,7 +8,7 @@ export type CarsProps = {
 export function Cars(props: CarsProps) {
 	const { items } = props
 	return (
-		<ul className="flex w-full flex-col">
+		<ul className="flex w-full flex-col border-b-2 border-b-zinc-200">
 			{items.map((item) => (
 				<CarsItem key={item.id} {...item} />
 			))}
