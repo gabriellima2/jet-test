@@ -1,5 +1,5 @@
 import { Table } from '@/app/ui/components/table'
-import { CarTableItem } from './car-table-item'
+import { CarTableItem } from './components/car-table-item'
 
 import { CarEntity } from '@/entities/car.entity'
 

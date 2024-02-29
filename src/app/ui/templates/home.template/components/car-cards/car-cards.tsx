@@ -1,16 +1,16 @@
-import { CarsItem } from './cars-item'
+import { CarCardsItem } from './components/car-cards-item'
 import { CarEntity } from '@/entities/car.entity'
 
-export type CarsProps = {
+export type CarCardsProps = {
 	items: CarEntity[]
 }
 
-export function Cars(props: CarsProps) {
+export function CarCards(props: CarCardsProps) {
 	const { items } = props
 	return (
 		<ul className="flex w-full flex-col border-b-2 border-b-zinc-200">
 			{items.map((item) => (
-				<CarsItem key={item.id} {...item} />
+				<CarCardsItem key={item.id} {...item} />
 			))}
 		</ul>
 	)

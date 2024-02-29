@@ -1,7 +1,7 @@
 import { cars } from '@/data/cars'
 
 import { CarTable } from './components/car-table'
-import { Cars } from './components/cars'
+import { CarCards } from './components/car-cards'
 
 export function HomeTemplate() {
 	return (
@@ -10,7 +10,7 @@ export function HomeTemplate() {
 				<CarTable items={cars} />
 			</div>
 			<div className="sm:hidden">
-				<Cars items={cars} />
+				<CarCards items={cars} />
 			</div>
 		</div>
 	)

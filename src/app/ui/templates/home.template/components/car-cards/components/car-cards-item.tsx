@@ -5,9 +5,9 @@ import { Card } from '@/app/ui/components/card'
 import { getDateText } from '@/helpers/get-date-text'
 import { CarEntity } from '@/entities/car.entity'
 
-export type CarsItemProps = CarEntity
+export type CarCardsItemProps = CarEntity
 
-export function CarsItem(props: CarsItemProps) {
+export function CarCardsItem(props: CarCardsItemProps) {
 	return (
 		<li className="w-full">
 			<Card.Root>
