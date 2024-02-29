@@ -14,13 +14,15 @@ const DEFAULT_ICONS = {
 	unavailable: X,
 }
 
+const getVariants = (status: CarStatus) => ({
+	isAvailable: status === CAR_STATUS.available,
+	isUnavailable: status === CAR_STATUS.unavailable,
+})
+
 function Text(props: StatusDefaultProps) {
 	const { status, className } = props
 	const statusText = !CAR_STATUS[status] ? 'Invalid Status' : status
-	const variants = {
-		isAvailable: status === CAR_STATUS.available,
-		isUnavailable: status === CAR_STATUS.unavailable,
-	}
+	const variants = getVariants(status)
 	return (
 		<p
 			className={cn(
@@ -40,9 +42,19 @@ function Text(props: StatusDefaultProps) {
 function Icon(props: StatusDefaultProps) {
 	const { status, className } = props
 	const StatusIcon = DEFAULT_ICONS[status] || AlertCircle
+	const variants = getVariants(status)
 	return (
-		<div className={cn(className)}>
-			<StatusIcon size={20} />
+		<div
+			className={cn(
+				'flex h-6 w-6 items-center justify-center rounded-full bg-gray-600',
+				{
+					'bg-[#057A55]': variants.isAvailable,
+					'bg-red-700': variants.isUnavailable,
+				},
+				className
+			)}
+		>
+			<StatusIcon size={16} color="#ffffff" />
 		</div>
 	)
 }
