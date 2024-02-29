@@ -22,12 +22,16 @@ export function CarTableItem(props: CarTableItemProps) {
 		<Table.Row>
 			<Table.DataCell className="max-w-[298px]">
 				<div className="flex flex-row items-center gap-2">
-					<Image
-						src={props.imageUrl}
-						alt={`Image of ${props.name}`}
-						width={48}
-						height={46}
-					/>
+					<div className="relative min-h-[48px] w-[48px] min-w-[48px]">
+						<Image
+							src={props.imageUrl}
+							alt={`Image of ${props.name}`}
+							fill
+							className="object-cover"
+							priority
+						/>
+					</div>
+
 					<p className="text-gray-900">{props.name}</p>
 				</div>
 			</Table.DataCell>
