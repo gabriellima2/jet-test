@@ -15,7 +15,7 @@ function Root(props: RootProps) {
 	return (
 		<article
 			className={cn(
-				'flex min-h-[100px] max-w-[344px] flex-row flex-wrap gap-5 border-t-2 border-t-zinc-200 py-2',
+				'flex min-h-[100px] flex-row flex-wrap gap-5 border-t-2 border-t-zinc-200 py-2',
 				className
 			)}
 			{...rest}

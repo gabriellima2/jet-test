@@ -11,7 +11,7 @@ export function CarsItem(props: CarsItemProps) {
 	return (
 		<li className="w-full">
 			<Card.Root>
-				<div className="relative">
+				<div className="xs:w-auto relative w-full">
 					<Card.Image src={props.imageUrl} alt={`Image of ${props.name}`} />
 					<Status.Icon
 						status={props.status}
