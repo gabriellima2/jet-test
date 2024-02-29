@@ -19,7 +19,7 @@ export function CarsItem(props: CarsItemProps) {
 					/>
 				</div>
 				<Card.Content>
-					<div className="flex h-full flex-col justify-between">
+					<div className="flex h-full flex-col justify-between gap-4">
 						<div className="flex flex-col gap-2">
 							<Card.Title>{props.name}</Card.Title>
 							<Card.Paragraph>
