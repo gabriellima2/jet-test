@@ -15,8 +15,8 @@ export function MenuButton(props: MenuButtonProps) {
 			type="button"
 			title="Menu"
 			className={cn(
-				className,
-				'cursor-pointer rounded-full p-2 transition-colors hover:bg-zinc-100 focus:bg-zinc-100'
+				'cursor-pointer rounded-full p-2 transition-colors hover:bg-zinc-100 focus:bg-zinc-100',
+				className
 			)}
 			{...rest}
 		>
